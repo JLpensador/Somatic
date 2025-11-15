@@ -3,15 +3,48 @@
 
   <input type="file" (change)="onFileSelected($event)" />
 
-<select [(ngModel)]="selectedFormat">
-  <option value="png">PNG</option>
-  <option value="jpg">JPG</option>
-  <option value="webp">WEBP</option>
-  <option value="pdf">PDF</option>
-  <option value="mp3">MP3</option>
-  <option value="mp4">MP4</option>
-  <option value="wav">WAV</option>
-</select>
+ <select
+      id="format"
+      [(ngModel)]="selectedFormat"
+      class="format-select"
+      [class.has-value]="selectedFormat"
+    >
+      <option value="" disabled>Selecione o formato</option>
+
+      <!-- Imagens -->
+      <optgroup label="📷 Imagens">
+        <option value="png">PNG</option>
+        <option value="jpg">JPG/JPEG</option>
+        <option value="webp">WEBP</option>
+        <option value="gif">GIF</option>
+        <option value="avif">AVIF</option>
+      </optgroup>
+
+      <!-- Áudio -->
+      <optgroup label="🎵 Áudio">
+        <option value="mp3">MP3</option>
+        <option value="wav">WAV</option>
+        <option value="ogg">OGG</option>
+        <option value="flac">FLAC</option>
+        <option value="aac">AAC</option>
+      </optgroup>
+
+      <!-- Vídeo -->
+      <optgroup label="🎬 Vídeo">
+        <option value="mp4">MP4</option>
+        <option value="avi">AVI</option>
+        <option value="mkv">MKV</option>
+        <option value="webm">WEBM</option>
+        <option value="mov">MOV</option>
+      </optgroup>
+
+      <!-- Documentos -->
+      <optgroup label="📄 Documentos">
+        <option value="pdf">PDF</option>
+        <option value="docx">DOCX</option>
+        <option value="txt">TXT</option>
+      </optgroup>
+    </select>
 
   <button (click)="onSubmit()">Converter</button>
 
