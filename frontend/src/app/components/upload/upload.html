@@ -1,9 +1,10 @@
-<div class="upload-container">
-  <h2>Conversor de Arquivos</h2>
+<div class="page-wrapper">
+  <div class="upload-container">
+    <h2>Conversor de Arquivos</h2>
 
-  <input type="file" (change)="onFileSelected($event)" />
+    <input type="file" (change)="onFileSelected($event)" />
 
- <select
+    <select
       id="format"
       [(ngModel)]="selectedFormat"
       class="format-select"
@@ -11,7 +12,6 @@
     >
       <option value="" disabled>Selecione o formato</option>
 
-      <!-- Imagens -->
       <optgroup label="📷 Imagens">
         <option value="png">PNG</option>
         <option value="jpg">JPG/JPEG</option>
@@ -20,7 +20,6 @@
         <option value="avif">AVIF</option>
       </optgroup>
 
-      <!-- Áudio -->
       <optgroup label="🎵 Áudio">
         <option value="mp3">MP3</option>
         <option value="wav">WAV</option>
@@ -29,7 +28,6 @@
         <option value="aac">AAC</option>
       </optgroup>
 
-      <!-- Vídeo -->
       <optgroup label="🎬 Vídeo">
         <option value="mp4">MP4</option>
         <option value="avi">AVI</option>
@@ -38,7 +36,6 @@
         <option value="mov">MOV</option>
       </optgroup>
 
-      <!-- Documentos -->
       <optgroup label="📄 Documentos">
         <option value="pdf">PDF</option>
         <option value="docx">DOCX</option>
@@ -46,7 +43,8 @@
       </optgroup>
     </select>
 
-  <button (click)="onSubmit()">Converter</button>
+    <button (click)="onSubmit()">Converter</button>
 
-  <p *ngIf="message">{{ message }}</p>
+    <p *ngIf="message">{{ message }}</p>
+  </div>
 </div>
