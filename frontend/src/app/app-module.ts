@@ -4,15 +4,18 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { Upload } from './components/upload/upload';
-import { Result } from './components/result/result';
+
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { Header } from './components/header/header';
+import { Links } from './components/links/links';
 
 @NgModule({
   declarations: [
     App,
     Upload,
-    Result
+    Header,
+    Links
   ],
   imports: [
     BrowserModule,
