@@ -1,16 +1,22 @@
 {
-  "name": "backend",
-  "version": "1.0.0",
-  "main": "server.js",
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "somatic-converter-api",
+  "version": "2.0.0",
+  "description": "Conversor de arquivos usando CloudConvert API",
+  "main": "src/server.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cloudconvert": "^3.0.0",
     "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "multer": "^2.0.2",
     "sharp": "^0.34.5"
