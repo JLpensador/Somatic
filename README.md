@@ -293,6 +293,3 @@ curl -X POST http://localhost:3000/convert \
 ```
 
 ---
-## 🤝 Contribuição
-
-Contribuições são bem-vindas! Abra uma issue ou pull request.
