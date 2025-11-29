@@ -2,6 +2,8 @@
   <div class="upload-container">
     <h2>Conversor de Arquivos</h2>
 
+    <div class="credits-badge" *ngIf="credits !== null">Créditos: {{ credits }}</div>
+
     <input type="file" (change)="onFileSelected($event)" />
 
     <select
@@ -43,8 +45,9 @@
       </optgroup>
     </select>
 
-    <button (click)="onSubmit()">Converter</button>
-
-    <p *ngIf="message">{{ message }}</p>
+    <button (click)="onSubmit()" [disabled]="isLoading || !selectedFile">
+      <span *ngIf="!isLoading">Converter</span>
+      <span *ngIf="isLoading">Convertendo...</span>
+    </button>
   </div>
 </div>

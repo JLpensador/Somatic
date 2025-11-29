@@ -10,7 +10,7 @@
   max-width: 500px;
   width: 100%;
   padding: 40px;
-  background: linear-gradient(135deg, #042159 0%, #0487D9 100%);
+  background: linear-gradient(135deg, #032059 0%, #0487D9 100%);
   border-radius: 24px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -42,6 +42,17 @@
     text-align: center;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     letter-spacing: 0.5px;
+  }
+
+  .credits-badge {
+    background: linear-gradient(135deg, #042159 0%, #0879A6 100%);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 0.9rem;
   }
 
   input[type="file"] {
@@ -158,9 +169,9 @@
     }
 
     &:disabled {
-      opacity: 0.6;
+      background: #ccc;
       cursor: not-allowed;
-      transform: none;
+      opacity: 0.6;
     }
   }
 
